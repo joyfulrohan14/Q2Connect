@@ -60,12 +60,38 @@ $(function() {
 	});
 
 	$(".my-login-validation").submit(function() {
+		console.log("test");
 		var form = $(this);
         if (form[0].checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
         }
+		// if(document.getElementById("health").checked)
+		// {
+		// 	Window.location.href = "doctor_portal.html";
+		// 	console.log("health");
+		// }
+		// else if(document.getElementById("family").checked)
+		// {
+		// 	location.href = "family_portal.html";
+		// 	console.log("family");
+		// }
 	
 		form.addClass('was-validated');
 	});
+	function redirect() {
+		var textValue = document.getElementById("drone").value;
+		if(textValue = "health")
+		{
+			location.href = "doctor_portal.html";
+		}
+		else if(textValue == "family")
+		{
+			location.href = "family_portal.html";
+		}
+		else
+		{
+			alert("Invalid Input");
+		}
+	}
 });

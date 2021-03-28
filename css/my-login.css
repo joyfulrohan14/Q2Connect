@@ -49,6 +49,12 @@ body.my-login-page {
 
 .my-login-page .btn.btn-block {
 	padding: 12px 10px;
+	background-color: lightblue; 
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
 }
 
 .my-login-page .footer {
